@@ -22,11 +22,11 @@ function powercoders_widgets_init()
 add_action('widgets_init', 'powercoders_widgets_init');
 
 function powercoders_post_types(){
-    //person post type 
+    //person post type
     register_post_type('person',array(
         'supports' => array('title', 'editor','excerpt'),
         'rewrite' => array('slug' => 'persons'),
-        'has_archive' => true,  
+        'has_archive' => true,
         'public' => true,
         'labels' => array(
             'name' => 'Persons',
@@ -38,3 +38,4 @@ function powercoders_post_types(){
         'menu_icon' =>'dashicons-admin-users'
     ));
     add_action('init','university_post_types');
+}
