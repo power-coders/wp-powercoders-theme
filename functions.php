@@ -53,5 +53,5 @@ function powercoders_post_types(){
         'menu_icon' =>'dashicons-awards'
     ));
 }
-    add_action('init','university_post_types');
+    add_action('init','powercoders_post_types');
 
