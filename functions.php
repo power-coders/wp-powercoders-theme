@@ -12,6 +12,8 @@ add_action('after_setup_theme', 'powercoders_setup_theme');
 function powercoders_enqueue_scripts()
 {
     // https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts
+
+    wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css', array() );
 }
 add_action('wp_enqueue_scripts', 'powercoders_enqueue_scripts');
 
