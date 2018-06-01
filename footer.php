@@ -2,7 +2,7 @@
 <footer class="page-footer">
   <div class="container">
 		<div class="row">
-      <div id="footer-sidebar" class="secondary">
+      <div id="footer-sidebar" class="secondary col s12 m4 l2">
         <div id="footer-sidebar1">
           <?php
           if(is_active_sidebar('footer-sidebar-1')){
@@ -10,28 +10,28 @@
           }
           ?>
           </div>
-          <div id="footer-sidebar2">
+          <div id="footer-sidebar2" class="col s12 m4 l2">
           <?php
           if(is_active_sidebar('footer-sidebar-2')){
           dynamic_sidebar('footer-sidebar-2');
           }
           ?>
           </div>
-          <div id="footer-sidebar3">
+          <div id="footer-sidebar3" class="col s12 m4 l2">
           <?php
           if(is_active_sidebar('footer-sidebar-3')){
           dynamic_sidebar('footer-sidebar-3');
           }
           ?>
           </div>
-          <div id="footer-sidebar4">
+          <div id="footer-sidebar4" class="col s12 m6 l3">
           <?php
           if(is_active_sidebar('footer-sidebar-4')){
           dynamic_sidebar('footer-sidebar-4');
           }
           ?>
           </div>
-          <div id="footer-sidebar5">
+          <div id="footer-sidebar5" class="col s12 m6 l3">
           <?php
           if(is_active_sidebar('footer-sidebar-5')){
           dynamic_sidebar('footer-sidebar-5');
@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
+
   <div class="footer-copyright">
 		<div class="container">
 			<div class="row">
