@@ -4,6 +4,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 <section>
+  <?php the_post_thumbnail( 'full' ); ?>
   <?php the_content(); ?>
 </section>
 <?php endwhile; ?>
