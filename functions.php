@@ -32,53 +32,6 @@ function powercoders_setup_theme()
       ));
 
     register_nav_menu('main', 'Main Menu'); // we will be using one menu for navigation
-
-    // Register the footer
-    register_sidebar( array(
-      'name' => 'Footer Sidebar 1',
-      'id' => 'footer-sidebar-1',
-      'description' => 'Appears in the footer area',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-      ) );
-    register_sidebar( array(
-      'name' => 'Footer Sidebar 2',
-      'id' => 'footer-sidebar-2',
-      'description' => 'Appears in the footer area',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-      ) );
-    register_sidebar( array(
-      'name' => 'Footer Sidebar 3',
-      'id' => 'footer-sidebar-3',
-      'description' => 'Appears in the footer area',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-      ) );
-    register_sidebar( array(
-      'name' => 'Footer Sidebar 4',
-      'id' => 'footer-sidebar-4',
-      'description' => 'Appears in the footer area',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-      ) );
-    register_sidebar( array(
-      'name' => 'Footer Sidebar 5',
-      'id' => 'footer-sidebar-5',
-      'description' => 'Appears in the footer area',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-      ) );
 }
 
 add_action('after_setup_theme', 'powercoders_setup_theme');
@@ -94,5 +47,56 @@ add_action('wp_enqueue_scripts', 'powercoders_enqueue_scripts');
 function powercoders_widgets_init()
 {
     // https://codex.wordpress.org/Widgets_API
+
+// Register the footer
+    register_sidebar( array(
+      'name' => 'Footer Sidebar 1',
+      'id' => 'footer-sidebar-1',
+      'description' => 'Appears in the footer area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+      'name' => 'Footer Sidebar 2',
+      'id' => 'footer-sidebar-2',
+      'description' => 'Appears in the footer area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+      'name' => 'Footer Sidebar 3',
+      'id' => 'footer-sidebar-3',
+      'description' => 'Appears in the footer area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+      'name' => 'Footer Sidebar 4',
+      'id' => 'footer-sidebar-4',
+      'description' => 'Appears in the footer area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ) );
+
+    register_sidebar( array(
+      'name' => 'Footer Sidebar 5',
+      'id' => 'footer-sidebar-5',
+      'description' => 'Appears in the footer area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ) );
 }
 add_action('widgets_init', 'powercoders_widgets_init');
