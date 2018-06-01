@@ -1,46 +1,43 @@
-
 <footer class="page-footer">
-  <div class="container">
+	<div class="container">
 		<div class="row">
-      <div id="footer-sidebar" class="secondary">
-        <div id="footer-sidebar1">
-          <?php
-          if(is_active_sidebar('footer-sidebar-1')){
-          dynamic_sidebar('footer-sidebar-1');
-          }
-          ?>
-          </div>
-          <div id="footer-sidebar2">
-          <?php
-          if(is_active_sidebar('footer-sidebar-2')){
-          dynamic_sidebar('footer-sidebar-2');
-          }
-          ?>
-          </div>
-          <div id="footer-sidebar3">
-          <?php
+			<div class="col s12 m4 l2">
+        <?php
+        if(is_active_sidebar('footer-sidebar-1')){
+        dynamic_sidebar('footer-sidebar-1');
+        }
+        ?>
+			</div>
+			<div class="col s12 m4 l2">
+        <?php
+        if(is_active_sidebar('footer-sidebar-2')){
+        dynamic_sidebar('footer-sidebar-2');
+        }
+        ?>
+			</div>
+			<div class="col s12 m4 l2">
+        <?php
           if(is_active_sidebar('footer-sidebar-3')){
           dynamic_sidebar('footer-sidebar-3');
           }
-          ?>
-          </div>
-          <div id="footer-sidebar4">
-          <?php
+        ?>
+			</div>
+			<div class="col s12 m6 l3">
+        <?php
           if(is_active_sidebar('footer-sidebar-4')){
           dynamic_sidebar('footer-sidebar-4');
           }
-          ?>
-          </div>
-          <div id="footer-sidebar5">
-          <?php
-          if(is_active_sidebar('footer-sidebar-5')){
-          dynamic_sidebar('footer-sidebar-5');
-          }
-          ?>
-        </div>
-      </div>
-    </div>
-  </div>
+        ?>
+			</div>
+			<div class="col s12 m6 l3">
+        <?php
+        if(is_active_sidebar('footer-sidebar-5')){
+        dynamic_sidebar('footer-sidebar-5');
+        }
+        ?>
+			</div>
+		</div>
+	</div>
 
   <div class="footer-copyright">
 		<div class="container">
