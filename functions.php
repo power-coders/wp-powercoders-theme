@@ -48,10 +48,9 @@ function powercoders_widgets_init()
 {
     // https://codex.wordpress.org/Widgets_API
 
-// Register the footer
     register_sidebar( array(
-      'name' => 'Footer Sidebar 1',
-      'id' => 'footer-sidebar-1',
+      'name' => 'Content Footer', 'powercoders',
+      'id' => 'content-footer',
       'description' => 'Appears in the footer area',
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget' => '</aside>',
@@ -60,8 +59,8 @@ function powercoders_widgets_init()
     ) );
 
     register_sidebar( array(
-      'name' => 'Footer Sidebar 2',
-      'id' => 'footer-sidebar-2',
+      'name' => 'Get Involved Footer', 'powercoders',
+      'id' => 'get-involved-footer',
       'description' => 'Appears in the footer area',
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget' => '</aside>',
@@ -70,8 +69,8 @@ function powercoders_widgets_init()
     ) );
 
     register_sidebar( array(
-      'name' => 'Footer Sidebar 3',
-      'id' => 'footer-sidebar-3',
+      'name' => 'Powercoders Footer', 'powercoders',
+      'id' => 'powercoders-footer',
       'description' => 'Appears in the footer area',
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget' => '</aside>',
@@ -80,8 +79,8 @@ function powercoders_widgets_init()
     ) );
 
     register_sidebar( array(
-      'name' => 'Footer Sidebar 4',
-      'id' => 'footer-sidebar-4',
+      'name' => 'Mailinglist Footer', 'powercoders',
+      'id' => 'mailinglist-footer',
       'description' => 'Appears in the footer area',
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget' => '</aside>',
@@ -90,8 +89,8 @@ function powercoders_widgets_init()
     ) );
 
     register_sidebar( array(
-      'name' => 'Footer Sidebar 5',
-      'id' => 'footer-sidebar-5',
+      'name' => 'Donate Footer', 'powercoders',
+      'id' => 'donate-footer',
       'description' => 'Appears in the footer area',
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget' => '</aside>',
@@ -99,4 +98,4 @@ function powercoders_widgets_init()
       'after_title' => '</h3>',
     ) );
 }
-add_action('widgets_init', 'powercoders_widgets_init');
+add_action('widgets_init', 'powercoders_widgets_init')
