@@ -3,36 +3,36 @@
 		<div class="row">
 			<div class="col s12 m4 l2">
         <?php
-        if(is_active_sidebar('footer-sidebar-1')){
-        dynamic_sidebar('footer-sidebar-1');
+        if(is_active_sidebar('content-footer')){
+        dynamic_sidebar('content-footer');
         }
         ?>
 			</div>
 			<div class="col s12 m4 l2">
         <?php
-        if(is_active_sidebar('footer-sidebar-2')){
-        dynamic_sidebar('footer-sidebar-2');
+        if(is_active_sidebar('get-involved-footer')){
+        dynamic_sidebar('get-involved-footer');
         }
         ?>
 			</div>
 			<div class="col s12 m4 l2">
         <?php
-          if(is_active_sidebar('footer-sidebar-3')){
-          dynamic_sidebar('footer-sidebar-3');
+          if(is_active_sidebar('powercoders-footer')){
+          dynamic_sidebar('powercoders-footer');
           }
         ?>
 			</div>
 			<div class="col s12 m6 l3">
         <?php
-          if(is_active_sidebar('footer-sidebar-4')){
-          dynamic_sidebar('footer-sidebar-4');
+          if(is_active_sidebar('mailinglist-footer')){
+          dynamic_sidebar('mailinglist-footer');
           }
         ?>
 			</div>
 			<div class="col s12 m6 l3">
         <?php
-        if(is_active_sidebar('footer-sidebar-5')){
-        dynamic_sidebar('footer-sidebar-5');
+        if(is_active_sidebar('donate-footer')){
+        dynamic_sidebar('donate-footer');
         }
         ?>
 			</div>
