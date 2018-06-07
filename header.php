@@ -7,7 +7,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php  body_class(); ?>>
+<header >
+    <h1> Powercoders </h1>
+    <p>The new Website for powercoders.</p>
+  </header>
 
-<header>
-</header>
+
