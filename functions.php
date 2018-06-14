@@ -1,7 +1,6 @@
 <?php
 
-function powercoders_setup_theme()
-{
+function powercoders_setup_theme(){
     add_theme_support('title-tag');         // https://codex.wordpress.org/Title_Tag
     add_theme_support('post-thumbnails');   // https://codex.wordpress.org/Post_Thumbnails
     add_theme_support('menus');             // Add Menu Support
@@ -84,7 +83,7 @@ add_action('widgets_init', 'powercoders_widgets_init');
 function powercoders_post_types(){
     //person post type
     register_post_type('person',array(
-        'supports' => array('title', 'editor','excerpt'),
+        'supports' => array('title', 'editor',),
         'rewrite' => array('slug' => 'persons'),
         'has_archive' => true,
         'public' => true,
@@ -97,7 +96,8 @@ function powercoders_post_types(){
             ),
         'menu_icon' =>'dashicons-admin-users'
     ));
-       //Program post type
+
+      //Program post type
      register_post_type('program',array(
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'programs'),
@@ -114,4 +114,7 @@ function powercoders_post_types(){
     ));
 }
     add_action('init','powercoders_post_types');
+
+
+
 
