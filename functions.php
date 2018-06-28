@@ -1,7 +1,6 @@
 <?php
 
-function powercoders_setup_theme()
-{
+function powercoders_setup_theme(){
     add_theme_support('title-tag');         // https://codex.wordpress.org/Title_Tag
     add_theme_support('post-thumbnails');   // https://codex.wordpress.org/Post_Thumbnails
     add_theme_support('menus');             // Add Menu Support
@@ -18,12 +17,24 @@ function powercoders_setup_theme()
 
 add_action('after_setup_theme', 'powercoders_setup_theme');
 
-function powercoders_enqueue_scripts()
+function powercoders_enqueue_styles()
 {
     // https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts
     wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css', array() );
+   }
+
+add_action('wp_enqueue_scripts', 'powercoders_enqueue_styles');
+
+function powercoders_enqueue_script(){
+  
+      wp_enqueue_script('waypoints-js',get_template_directory_uri() . '/js/jquery.waypoints.js',['jquery']);
+       wp_enqueue_script('materilaize-js',get_template_directory_uri() . '/js/materialize.js',['jquery']); 
+     wp_enqueue_script('main-powercoders-js',get_template_directory_uri() . '/js/init.js',['waypoints-js','materilaize-js','jquery']);
 }
-add_action('wp_enqueue_scripts', 'powercoders_enqueue_scripts');
+
+add_action('wp_enqueue_scripts', 'powercoders_enqueue_script');
+
+
 
 function powercoders_widgets_init()
 {
@@ -84,7 +95,7 @@ add_action('widgets_init', 'powercoders_widgets_init');
 function powercoders_post_types(){
     //person post type
     register_post_type('person',array(
-        'supports' => array('title', 'editor','excerpt'),
+        'supports' => array('title', 'editor',),
         'rewrite' => array('slug' => 'persons'),
         'has_archive' => true,
         'public' => true,
@@ -97,7 +108,8 @@ function powercoders_post_types(){
             ),
         'menu_icon' =>'dashicons-admin-users'
     ));
-       //Program post type
+
+      //Program post type
      register_post_type('program',array(
         'supports' => array('title', 'editor'),
         'rewrite' => array('slug' => 'programs'),
@@ -114,4 +126,3 @@ function powercoders_post_types(){
     ));
 }
     add_action('init','powercoders_post_types');
-
