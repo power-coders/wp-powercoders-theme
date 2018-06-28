@@ -26,22 +26,15 @@ function powercoders_enqueue_styles()
 add_action('wp_enqueue_scripts', 'powercoders_enqueue_styles');
 
 function powercoders_enqueue_script(){
-   wp_enqueue_script('main-powercoders-js',get_template_directory_uri() . '/js/init.js',array());
-      wp_enqueue_script('waypoints-js',get_template_directory_uri() . '/js/jquery.waypoints.js',array());
-       wp_enqueue_script('materilaize-js',get_template_directory_uri() . '/js/materialize.js',array()); 
+  
+      wp_enqueue_script('waypoints-js',get_template_directory_uri() . '/js/jquery.waypoints.js',['jquery']);
+       wp_enqueue_script('materilaize-js',get_template_directory_uri() . '/js/materialize.js',['jquery']); 
+     wp_enqueue_script('main-powercoders-js',get_template_directory_uri() . '/js/init.js',['waypoints-js','materilaize-js','jquery']);
 }
 
 add_action('wp_enqueue_scripts', 'powercoders_enqueue_script');
 
-function register_my_menus() {
-  register_nav_menus(
-    array(
-      'header-menu' => __( 'Header Menu' ),
-      'extra-menu' => __( 'Extra Menu' )
-    )
-  );
-}
-add_action( 'init', 'register_my_menus' );
+
 
 function powercoders_widgets_init()
 {
