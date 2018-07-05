@@ -4,11 +4,7 @@
  get_header();
 ?>
 <?php
-<<<<<<< HEAD
  while (have_posts()) : the_post(); 
-=======
- while (have_posts()) : the_post();
->>>>>>> 504959736f03e96853e5c6a48aeb9b37ae54ea14
 ?>
         <div class="parallax-container valign-wrapper">
             <div class="parallax">
