@@ -1,4 +1,4 @@
-<?php /* FAQ Page Template */ ?>
+<?php /*Template Name: FAQ Page Template */ ?>
 
 <?php
  get_header();
@@ -30,34 +30,30 @@
             <div class="row">
                 <div class="col s12 offset-l2 l8">
                     <?php  the_content();?>
+                    <hr class="whitespace">
+                    <?php if (have_rows('sections')):
+                        while(have_rows('sections')):the_row();?>    
+                    <h2><?php the_sub_field('title');?></h2>
+                    <!--if the section has a question&answer -->
+                        <?php if(have_rows('questions_answers')):?>
+                            <ul class="collapsible">
+                               <?php while (have_rows('questions_answers')): the_row();?>
+                                <li>
+                                    <div class="collapsible-header"><?php the_sub_field('question');?></div>
+                                    <div class="collapsible-body"><?php the_sub_field(' answer');?></div>
+                                </li>
+                                <?php endwhile;?><!-- End while (have_rows('questions_answers')) -->
+                            </ul>
+                    
+                        <?php endif;?><!-- End if(have_rows('questions_answers'))-->
+                    <?php endwhile;?><!-- End while (have_rows('sections') -->
+                    <?php endif;?><!-- End if (have_rows('sections') -->
                 </div>
             </div>
         </div>
         <div>
-        <hr class="whitespace">
-        <!-- The loop for the first repeater-->
-        <?php 
-            if (have_rows('faq')):
-            while (have_rows('faq')): the_row();
-        ?>
-        <h2> <?php the_sub_field('general');?></h2>
-        <?php if have_rows('general')?>
-        <ul class="collapsible">
-           <?php 
-                while (have_rows('general')) : the_row;
-            ?>
-            <li><div class="collapsible-header"><?php the_sub_field('questions'); ?></div>
-            <div class="collapsible-body"><?php the_sub_field('answers');?></div></li>
-            <?php endwhile;?>
-        </ul>
-         <?php endif;?>
-       <?php endwhile;?>
-        <?php endif?>
-     </div>
-<?php 
-endwhile;
-?>
-
+      
+<?php endwhile;?>
 
 <?php
 get_footer();
