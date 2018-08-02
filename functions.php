@@ -12,7 +12,10 @@ function powercoders_setup_theme(){
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
-    register_nav_menu('main', 'Main Menu'); // we will be using one menu for navigation
+    register_nav_menus(array(
+    'main' => 'Main Menu',
+    'get-involved' => 'Get Involved Menu'    
+    ));// we will be using one menu for navigation
 }
 
 add_action('after_setup_theme', 'powercoders_setup_theme');
