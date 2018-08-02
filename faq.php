@@ -38,12 +38,13 @@
                         ?>
                     <h2><?php echo $title;?></h2>
                     <?php
-                    if( have_rows('questions_answers') ):
-                    while( have_rows('questions_answers') ): the_row();
+                    if( have_rows('questions_answers') ): ?>
+                    <ul class="collapsible">
+                   <?php while( have_rows('questions_answers') ): the_row();
                     $question = get_sub_field('question');//get the questions
                     $answer = get_sub_field('answer');//get bthe answers
                     ?>
-                        <ul classs="collapsible">
+                        
                             <li>
                                 <div class="collapsible-header">
                                     <?php echo $question;?>
@@ -53,9 +54,10 @@
                                 </div>
                             </li>
 
-                        </ul>
+                        
                         <?php
                     endwhile; // End While have_rows('questions_answers')
+                     echo '</ul>';
                     endif;//End if have_rows('questions_answers')
                     endwhile;//End while  have_rows('sections') 
                     endif;//first if  have_rows('sections') 
