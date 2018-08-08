@@ -42,7 +42,7 @@
                     <ul class="collapsible">
                    <?php while( have_rows('questions_answers') ): the_row();
                     $question = get_sub_field('question');//get the questions
-                    $answer = get_sub_field('answer');//get bthe answers
+                    
                     ?>
                         
                             <li>
@@ -50,7 +50,9 @@
                                     <?php echo $question;?>
                                 </div>
                                 <div class="collapsible-body">
-                                    <?php echo $answer;?>
+                                    <?php 
+                                    $answer = get_sub_field('answer');//get the answers
+                                    echo $answer;?>
                                 </div>
                             </li>
 
