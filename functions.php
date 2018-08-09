@@ -130,5 +130,4 @@ function powercoders_post_types(){
 }
     add_action('init','powercoders_post_types');
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/acf-faq.php'); 
+include( get_template_directory() . '/acf-faq.php'); 

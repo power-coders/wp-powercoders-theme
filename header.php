@@ -21,15 +21,14 @@
     </a>
     <nav role="navigation">
         <div class="nav-wrapper container">
+             <?php wp_nav_menu( $args=array(
+                            'menu_class'=>'sidenav',
+                            'menu_id'=>'nav-mobile',
+                            'theme_location'=>'main'
+                        ));
+                ?>
             <ul id="nav-mobile" class="sidenav">
-                <!-- add the menu navigation (location , id , container, class name ) -->
-                <?php
-                $args = array(
-                    'theme_location' => 'main',
-                    'menu_id' => 'nav-mobile',
-                    'menu-class' => 'sidenav'
-                );
-                wp_nav_menu('$args'); ?>
+             
                 <!-- <li class="active"><a href="/">Home</a></li>
                             <li ><a href="/program">Program</a></li>
                             <li ><a href="/about">About</a></li>
